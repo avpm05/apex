@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% load static %}
+{% block style %}<link href="{% static "css/searchstyle.css" %}" rel="stylesheet"> {% endblock %}
+{% block title %}Поиск{% endblock %}
+
+{% block content %}
+    <div id="search-content">
+    {% for comp in companies %}
+        <p> {{ comp.name }}</p>
+    {% endfor %}
+    </div>
+{% endblock %}
+
