@@ -6,8 +6,11 @@
 {% block content %}
     <div id="search-content">
     {% for comp in companies %}
-        <p> {{ comp.name }}</p>
+        <p><a href = "http://{{ comp.site }}" id="Result-link"> {{ comp.name }}</a></p>
     {% endfor %}
     </div>
+    {% include "pagination.html" with page=page_obj %}
 {% endblock %}
+
+
 

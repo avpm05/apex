@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+EMAIL_HOST = 'server11.shneider-host.ru'
+EMAIL_HOST_USER = 'alert@apexconsult.ru'
+EMAIL_HOST_PASSWORD = '1qaz554627Q'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_Media = os.path.dirname(os.path.abspath(__file__))
@@ -127,4 +133,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     '/mnt/disk2/apexportal/media',
+    '/mnt/disk2/apexportal/search/static',
+    '/mnt/disk2/apexportal/main/static',
     ]
