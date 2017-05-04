@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^', include('scan.urls')),
     url(r'^', include('search.urls')),
     url(r'^', include('blacklist.urls')),
+    url(r'^', include('blog.urls',namespace='blog',app_name='blog')),
 ]

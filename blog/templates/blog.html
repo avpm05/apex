@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% load static %}
+{% block style %}<link href="{% static "css/mainstyle.css" %}" rel="stylesheet"> {% endblock %}
+{% block title %}Blog ApexConsult{% endblock %}
+
+{% block content %}
+    <h1>Blog ApexConsult</h1>
+    {%for post in posts %}
+    <h2><a href="{{ post.get_absolute_url }}"> {{post.title}}</a></h2>
+    <p class="datetime">{{ post.publish }}</p>
+    {{ post.body|truncatewords:30|linebreaks }}
+{% endfor %}
+{% endblock %}
+
+
+

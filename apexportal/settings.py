@@ -12,11 +12,11 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
-EMAIL_HOST = 'server11.shneider-host.ru'
-EMAIL_HOST_USER = 'alert@apexconsult.ru'
+EMAIL_HOST = 'mail.apexconsult.ru'
+EMAIL_HOST_USER = 'mail@apexconsult.ru'
 EMAIL_HOST_PASSWORD = '1qaz554627Q'
-EMAIL_PORT = 465
-EMAIL_USE_TLS = True
+EMAIL_PORT = 25
+EMAIL_USE_TLS = False
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'search',
+    'blog',
 ]
 
 MIDDLEWARE = [

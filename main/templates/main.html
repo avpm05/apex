@@ -4,19 +4,16 @@
 {% block title %}Поиск{% endblock %}
 
 {% block content %}
+
     {% if sent %}
-        <h1>E-mail successfully sent</h1>
-
-        {% else %}
-
+        <h2>E-mail successfully sent</h2>
+    {% else %}
         <form action="." method="post" class="form-inline">
-              {{ form
-                      }}
+              {{ form.as_table }}
               {% csrf_token %}
             <input type="submit" class="btn btn-default" value="Send e-mail">
         </form>
-
-        {% endif %}
+    {% endif %}
 {% endblock %}
 
 

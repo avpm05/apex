@@ -34,6 +34,7 @@ class People(models.Model):
     SecondName = models.CharField(db_column='SecondName',max_length=200)
     LastName = models.CharField(db_column='LastName', max_length=200)
 
+
     class Meta:
         db_table ='people'
 
@@ -41,13 +42,14 @@ class Sources(models.Model):
     Name = models.CharField(db_column = 'Name', max_length = 200)
     Url =  models.CharField(db_column='Url', max_length=200)
     Type = models.CharField(db_column='Type',max_length=30)
+    Description = models.TextField(db_column='Description', blank = True, null = True)
 
     class Meta:
         db_table = 'source'
 
 class Posts (models.Model):
     Body = models.CharField(db_column = 'Body', max_length = 200)
-    Url =  models.CharField(db_column='Url', max_length=200, unique=True)
+    Url =  models.CharField(db_column='Url',max_length=200, unique=True)
     Type = models.CharField(db_column='Type',max_length=30)
     DataCreated = models.DateField(db_column='DateCreated')
     Author = models.ForeignKey('People',on_delete=models.CASCADE)
