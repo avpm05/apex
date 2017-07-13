@@ -1,19 +1,20 @@
 {% extends "index.html" %}
 {% load static %}
 {% block style %}<link href="{% static "css/mainstyle.css" %}" rel="stylesheet"> {% endblock %}
-{% block title %}Поиск{% endblock %}
+{% block title %}Разарботка и продажа баз данных. Парсинг сайтов. {% endblock %}
 
 {% block content %}
-
+  <h1 #id="MainThink"> Нужны дынные по клиентам ? - они все у нас. Продажа баз данных.Сбор и анализ данных. Обогощение данных. Автоматическое наполнение интернет магазинов.</h1>    <div #id ="SentOrder" class="">
     {% if sent %}
         <h2>E-mail successfully sent</h2>
     {% else %}
         <form action="." method="post" class="form-inline">
               {{ form.as_table }}
               {% csrf_token %}
-            <input type="submit" class="btn btn-default" value="Send e-mail">
+            <input type="submit" class="btn btn-default" value="Заказ">
         </form>
     {% endif %}
+    </div>
 {% endblock %}
 
 

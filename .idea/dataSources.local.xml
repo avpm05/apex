@@ -7,5 +7,11 @@
       <schema-pattern>apexdb.public</schema-pattern>
       <default-schemas>apexdb.public</default-schemas>
     </data-source>
+    <data-source name="Django default" uuid="1830b863-9a83-4daf-9946-f75d90b59ef3">
+      <user-name>postgres</user-name>
+      <user-password>df9bdfdbdfcbdfd0df9fdf9fdf9edf9cdf98df9ddffb</user-password>
+      <schema-pattern>apexdb.pg_catalog apexdb.public</schema-pattern>
+      <default-schemas>apexdb.public</default-schemas>
+    </data-source>
   </component>
 </project>

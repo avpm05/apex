@@ -4,9 +4,6 @@ from django.contrib.admin import models
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
-from postgresql.driver.dbapi20 import dbapi_type
-
 
 class Company(models.Model):
     name = models.CharField(db_column='Name', max_length=250, blank=True, null=True)

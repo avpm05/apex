@@ -20,4 +20,3 @@ def index(request):
         form=SendOrder()
 
     return render(request,'main.html',{'form':form,'sent':sent})
-

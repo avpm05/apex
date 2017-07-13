@@ -23,7 +23,7 @@ def company_list(request):
     page = request.GET.get('page')
 
     try:
-        companies = paginator.page('page')
+        companies = paginator.page(page)
     except PageNotAnInteger:
         companies = paginator.page(1)
     except EmptyPage:
